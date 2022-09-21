@@ -1,10 +1,9 @@
 {
    "background": {
-      "scripts": [  ]
    },
-   "browser_action": {
+   "action": {
       "default_icon": "icon.png",
-      "default_title": "ins-saver"
+      "default_title": "wechat-saver"
    },
    "content_scripts": [ {
       "css": [ "normal.css" ],
@@ -12,13 +11,14 @@
       "matches": ["https://mp.weixin.qq.com/*"],
       "run_at": "document_idle"
    } ],
-   "description": "instagram saver",
+   "description": "wechat saver",
    "icons": {
       "48": "icon.png",
       "128": "icon.png"
    },
-   "manifest_version": 2,
-   "name": "ins-saver",
-   "permissions": [ "activeTab", "http://*/*", "https://*/*" ],
+   "manifest_version": 3,
+   "name": "wechat-saver",
+   "permissions": [ "activeTab" ],
+   "host_permissions": [ "http://*/*", "https://*/*" ],
    "version": "1.0"
 }

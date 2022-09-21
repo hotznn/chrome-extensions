@@ -17,6 +17,11 @@
     $(".WB_miniblog").css("background", "rgba(0,0,0,0.65)");
     $(".S_wrap").css("background", "rgba(0,0,0,0.65)");
     $(".WB_frame").css("background", "rgba(73,72,72,0.25)");
+    setTimeout(function(){
+      console.log($(".WB_editor_iframe_new"));
+      $(".WB_editor_iframe_new").css("height", "auto");
+      $('[node-type="addBox"]').remove();
+    },3000);
   };
   main.markdown = function(){
     let me = this;
@@ -149,7 +154,7 @@
         }
       },1500);
     }
-    else if( (url.indexOf("https://d.weibo.com/")==0) || (url.indexOf("https://weibo.com/")==0) ) {
+    else if( (url.indexOf("https://d.weibo.com/")==0) || (url.indexOf("https://weibo.com/")==0) || (url.indexOf("https://www.weibo.com/")==0) ) {
       console.log("woo, let us do it.");
       function run() {
         let lines = $('.WB_cardwrap');

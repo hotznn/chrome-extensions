@@ -96,7 +96,10 @@ void function(){
     data.push("　　** " + author.join(" | ") + " ** ");
     data.push("");
     var text  = [];
-    me.list(text, $("#js_content, #media")[0]);
+    var cnt = $("#js_content, #media");
+    for(let i=0; i<cnt.length; i++){
+      me.list(text, cnt[i]);
+    }
     data.push(this.format(text.join("")));
     data.push('');
     data.push("　　- [查看来源](" + window.location.href + ")");

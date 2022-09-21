@@ -9,7 +9,7 @@
    "content_scripts": [ {
       "css": [ "normal.css" ],
       "js": [ "jquery.js", "content.js" ],
-      "matches": ["https://weibo.com/*", "https://s.weibo.com/*", "https://d.weibo.com/*" ],
+      "matches": ["https://weibo.com/*", "https://s.weibo.com/*", "https://d.weibo.com/*", "https://www.weibo.com/*" ],
       "run_at": "document_idle"
    } ],
    "description": "weibo saver",
